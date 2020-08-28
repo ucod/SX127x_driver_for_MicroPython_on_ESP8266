@@ -3,7 +3,7 @@ def receive(lora):
 
     while True:
         if lora.receivedPacket():
-            lora.blink_led()
+            
 
             try:
                 payload = lora.read_payload()
@@ -11,3 +11,4 @@ def receive(lora):
             except Exception as e:
                 print(e)
             print("with RSSI: {}\n".format(lora.packetRssi()))
+            print("Snr: {}\n".format(str(lora.packetSnr())))

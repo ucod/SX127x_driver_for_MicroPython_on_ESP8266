@@ -1,11 +1,11 @@
 # import LoRaDumpRegisters
 # import LoRaSender
-# import LoRaReceiver
+import LoRaReceiver
 # import LoRaSetSpread
 # import LoRaSetSyncWord
 # import LoRaReceiverCallback
 # import LoRaDuplex
-import LoRaDuplexCallback
+# import LoRaDuplexCallback
 import config_lora
 import sx127x
 
@@ -43,12 +43,12 @@ def main():
 
     # LoRaDumpRegisters.dumpRegisters(lora)
     # LoRaSender.send(lora)
-    # LoRaReceiver.receive(lora)
+    LoRaReceiver.receive(lora)
     # LoRaSetSpread.setSpread(lora)
     # LoRaSetSyncWord.setSyncWord(lora)
     # LoRaReceiverCallback.receiveCallback(lora)
     # LoRaDuplex.duplex(lora)
-    LoRaDuplexCallback.duplexCallback(lora)
+    # LoRaDuplexCallback.duplexCallback(lora)
     # LoRaPingPong.ping_pong(lora)
 
 

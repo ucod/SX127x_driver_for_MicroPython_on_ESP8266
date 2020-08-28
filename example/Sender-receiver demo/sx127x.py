@@ -77,9 +77,9 @@ class SX127x:
     
     def __init__(self,
                  name = 'SX127x',
-                 parameters = {'frequency': 433E6, 'tx_power_level': 2, 'signal_bandwidth': 125E3, 
-                               'spreading_factor': 8, 'coding_rate': 5, 'preamble_length': 8, 
-                               'implicitHeader': False, 'sync_word': 0x12, 'enable_CRC': False},
+                 parameters = {'frequency': 868E6, 'tx_power_level': 17, 'signal_bandwidth': 125E3, 
+                               'spreading_factor': 7, 'coding_rate': 5, 'preamble_length': 8, 
+                               'implicitHeader': False, 'sync_word': 0x30, 'enable_CRC': True},
                  onReceive = None):
                  
         self.name = name
@@ -288,9 +288,9 @@ class SX127x:
             # self.writeRegister(REG_IRQ_FLAGS_MASK, self.readRegister(REG_IRQ_FLAGS_MASK) | IRQ_RX_DONE_MASK)
    
    
-    # def dumpRegisters(self):
-        # for i in range(128):
-            # print("0x{0:02x}: {1:02x}".format(i, self.readRegister(i)))
+    def dumpRegisters(self):
+        for i in range(128):
+            print("0x{0:02x}: {1:02x}".format(i, self.readRegister(i)))
 
     
     def implicitHeaderMode(self, implicitHeaderMode = False):
