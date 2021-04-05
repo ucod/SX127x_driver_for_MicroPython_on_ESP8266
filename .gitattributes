@@ -1,0 +1,5 @@
+*.lbr linguist-detectable=true
+*.sch linguist-detectable=true
+*.xml linguist-generated=true
+*.txt linguist-generated=true
+*.pcb linguist-detectable=true
